@@ -1,12 +1,12 @@
 /**
  * @name FakeUnmute&Undeafen
  * @version 1
- * @description Allows you to fake mute and deafen yourself, shows for others. This has been found by many others but I've decided to add some features to beautify it.
- * @author Shifts
- * @source https://github.com/ignshifts
+ * @description Allows you to fake unmute/undeafen yourself in Discord which grants you the ability to hear/speak whilst the unmute/undeafen icon appears.
+ * @author Mashiron
+ * @source https://github.com/Mashiron01035
  */
 
-module.exports = class FakeUnmuteUndeafen {
+module.exports = class FakeUnMuteUnDeafen {
   start() {
 
     let React = BdApi.React;
@@ -26,6 +26,7 @@ module.exports = class FakeUnmuteUndeafen {
       WebSocket.prototype.original.apply(this, [data]);
     };
     BdApi.alert("Enabled", `You can now unmute or undeafen yourself and it will show for others.`);
+	    BdApi.Plugins.disable('FakeUnmute&Undeafen')
   }
   stop() {}
 };
