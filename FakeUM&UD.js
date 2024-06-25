@@ -26,7 +26,7 @@ module.exports = class FakeUnMuteUnDeafen {
       WebSocket.prototype.original.apply(this, [data]);
     };
     BdApi.alert("Enabled", `You can now unmute or undeafen yourself and it will show for others.`);
-	    BdApi.Plugins.disable('FakeUnmute&Undeafen')
+    BdApi.Plugins.disable('FakeUnmute&Undeafen')
   }
   stop() {}
 };
